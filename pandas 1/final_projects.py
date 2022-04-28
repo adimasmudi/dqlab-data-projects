@@ -25,7 +25,7 @@ print("\n[3] TRANSFORM product_value MENJADI product_id")
 
 def impute_product_value(val):
     if math.isnan(val):
-        return 'unknown'
+        return "unknown"
     else:
         return 'P' + '{:0>4}'.format(str(val).split('.')[0])
 
@@ -64,7 +64,7 @@ df[["city", "province"]] = df[["city", "province"]].fillna("unknown")
 # Kolom brand juga masih memiliki missing value, Ganti value NaN menjadi "no_brand"
 df["brand"] = df["brand"].fillna("no_brand")
 # Cek apakah masih terdapat missing value di seluruh kolom
-print("    Info:\n", df.info)
+print("    Info:\n", df.info())
 
 # 6. Membuat kolom baru "city/province" dengan menggabungkan kolom "city" dan kolom "province" dan delete kolom asalnya
 print("\n[6] MEMBUAT KOLOM BARU city/province")
